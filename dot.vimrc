@@ -59,7 +59,10 @@ let maplocalleader = ','
 
 " Numbering {{{
 set number
-if version >= 703
+if version >= 704
+  set relativenumber
+  nnoremap <Leader>n :set rnu!<CR>:set nu!<CR>
+elseif version>=703
   set relativenumber
   nnoremap <Leader>n :set rnu!<CR>
 else
