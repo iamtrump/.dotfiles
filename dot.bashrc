@@ -2,6 +2,7 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
+  alias sudoedit='sudo vim -u ~/.vimrc'
 else
   export PATH="/usr/sbin:/sbin:${PATH}"
 fi
@@ -34,7 +35,6 @@ alias du='du -h'
 alias grep='grep --color'
 #alias ssh='ssh -Y'
 alias e="$EDITOR"
-alias sudoedit="sudo $EDITOR"
 alias ..='cd ..'
 
 if [ -f ~/.bashrc.local ]; then
