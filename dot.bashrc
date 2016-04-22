@@ -4,6 +4,9 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   fi
   alias sudoedit='sudo vim -u ~/.vimrc'
 else
+  if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+  fi
   export PATH="/usr/sbin:/sbin:${PATH}"
 fi
 

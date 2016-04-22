@@ -53,8 +53,8 @@ set fileencodings=utf-8,cp1251,koi8-r,latin1
 " }}}
 
 " Leader key {{{
-let mapleader = ','
-let maplocalleader = ','
+let mapleader = '\'
+let maplocalleader = '\'
 " }}}
 
 " Numbering {{{
