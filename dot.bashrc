@@ -39,6 +39,9 @@ alias grep='grep --color'
 #alias ssh='ssh -Y'
 alias e="$EDITOR"
 alias ..='cd ..'
+alias ...='cd ../..'
+alias -- --='cd -'
+alias bc='bc -l'
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
