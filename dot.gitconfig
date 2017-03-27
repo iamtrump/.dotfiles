@@ -1,0 +1,8 @@
+[user]
+  name =  Mikhail Y. Mironov
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
