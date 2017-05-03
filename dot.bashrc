@@ -41,7 +41,7 @@ alias e="$EDITOR"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias -- --='cd -'
-alias bc='bc -l'
+alias bc='bc -lq'
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
