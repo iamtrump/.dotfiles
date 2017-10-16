@@ -1,36 +1,3 @@
-" NeoBundle {{{
- if has('vim_starting')
-   set nocompatible
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-" Solarized theme
-NeoBundle 'altercation/vim-colors-solarized'
-" GO Lang
-NeoBundle 'fatih/vim-go'
-" Super comments by <Leader> c
-NeoBundle 'scrooloose/nerdcommenter'
-
-call neobundle#end()
-
-filetype plugin indent on
-
-NeoBundleCheck
-"}}}
-
 " Loading of local settings {{{
 set exrc
 set secure

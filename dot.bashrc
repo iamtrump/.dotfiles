@@ -2,7 +2,8 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
-  alias sudoedit='sudo vim -u ~/.vimrc'
+  #alias sudoedit='sudo vim -u ~/.vimrc'
+  alias sudoedit='sudo ${EDITOR}'
 else
   if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -42,6 +43,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias -- --='cd -'
 alias bc='bc -lq'
+alias mc='mc -b'
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
