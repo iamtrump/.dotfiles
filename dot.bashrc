@@ -30,20 +30,22 @@ shopt -s cdspell
 export PS1='\[\e[0;32m\]\u@\h \[\e[0;33m\]\w \[\e[0;32m\]\$\[\e[m\] '
 
 # aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias -- --='cd -'
 alias ls='ls -F'
-alias l='ls'
+alias l='ls -1'
 alias ll='ls -l'
 alias la='ls -la'
 alias df='df -h'
 alias du='du -h'
+alias sudo='sudo '
 alias grep='grep --color'
-#alias ssh='ssh -Y'
+alias grepi='grep - --color'
 alias e="$EDITOR"
-alias ..='cd ..'
-alias ...='cd ../..'
-alias -- --='cd -'
 alias bc='bc -lq'
 alias mc='mc -b'
+alias @=at
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
