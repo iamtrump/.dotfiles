@@ -42,6 +42,7 @@ alias du='du -h'
 alias sudo='sudo '
 alias grep='grep --color'
 alias grepi='grep - --color'
+alias pgrep='ps -ef | grep -i'
 alias e="$EDITOR"
 alias bc='bc -lq'
 alias mc='mc -b'
