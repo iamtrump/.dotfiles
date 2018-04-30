@@ -7,3 +7,6 @@
   status = auto
   branch = auto
   interactive = auto
+
+[core]
+  excludesFile = ~/.gitignore_global
