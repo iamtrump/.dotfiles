@@ -1,6 +1,7 @@
 [user]
   name =  Mikhail Y. Mironov
-	email = mikhailmironov@mikhailmironov.ru
+  email = mikhailmironov@mikhailmironov.ru
+  signingkey = B4CA1E5D
 
 [color]
   diff = auto
@@ -10,3 +11,9 @@
 
 [core]
   excludesFile = ~/.gitignore_global
+
+[credential]
+  helper = cache --timeout 7200
+
+[gpg]
+  program = gpg
