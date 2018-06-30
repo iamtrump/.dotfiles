@@ -29,6 +29,36 @@ shopt -s cdspell
 # prompt
 export PS1='\[\e[0;32m\]\u@\h \[\e[0;33m\]\w \[\e[0;32m\]\$\[\e[m\] '
 
+# splash
+echo '
+                        o/.-                      
+                      :+ooo+`                     
+                     :ooooo++`                    
+                   `::ooooooo/`                   
+                   .:ooooooooo+                   
+                  `oooo+.+oooo+-                  
+                `:/ooo/. -++oooo.                 
+                /+ooo+    .ooooo+.                
+              .+oooo+      .oooo+/.               
+             .ooooo-        `ooooo:-              
+          .-:oooo+-          -oooo+/`             
+          /+oooooo+/:.    ``./oooooo-             
+       `.:+ooooooooo+-   `:++ooooooo.             
+            :-/+++/ooo  + ooooo+o+//              
+                :-ooo+  .:+oooo:                  
+               --:ooo`   -+ooooo                  
+               -./oo+     :+ooo+.                 
+               -`ooo:     -/oooo:-                
+              ../oo+       .o+ooo+.               
+              //ooo-        `+oooo/-              
+             -:/oo+.         .ooooo/              
+            `:+ooo-           -ooooo-             
+            .ooooo////////:----/ooooo             
+            -oooooooooooooooooooooooo             
+            --:::::-::::--.-//+///+::             
+'
+uptime
+
 # aliases
 alias ..='cd ..'
 alias ...='cd ../..'
