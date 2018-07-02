@@ -58,8 +58,8 @@ if shopt -q login_shell; then
             -oooooooooooooooooooooooo             
             --:::::-::::--.-//+///+::             
   '
+  uptime
 fi
-uptime
 
 # aliases
 alias ..='cd ..'
