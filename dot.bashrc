@@ -30,7 +30,8 @@ shopt -s cdspell
 export PS1='\[\e[0;32m\]\u@\h \[\e[0;33m\]\w \[\e[0;32m\]\$\[\e[m\] '
 
 # splash
-echo '
+if shopt -q login_shell; then
+  echo '
                         o/.-                      
                       :+ooo+`                     
                      :ooooo++`                    
@@ -56,7 +57,8 @@ echo '
             .ooooo////////:----/ooooo             
             -oooooooooooooooooooooooo             
             --:::::-::::--.-//+///+::             
-'
+  '
+fi
 uptime
 
 # aliases
