@@ -90,10 +90,6 @@ set wrap
 nnoremap <Leader>i :set list!<CR>
 " }}}
 
-" Clipboard {{{
-set clipboard=unnamed
-" }}}
-
 " Misc settings {{{
 " Fast terminal connection.
 set ttyfast
