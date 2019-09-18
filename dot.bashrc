@@ -79,6 +79,7 @@ alias e="$EDITOR"
 alias bc='bc -lq'
 alias mc='mc -b'
 alias @=at
+alias root='sudo -s -E'
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
