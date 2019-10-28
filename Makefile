@@ -7,7 +7,7 @@ all: ${OBJS} ${HOME}/.vim
 
 ${HOME}/.vim:
 	mkdir ${HOME}/.vim ${HOME}/.vim/undo ${HOME}/.vim/tmp ${HOME}/.vim/colors
-	${LN} ${PWD}/solarized.vim ${HOME}/.vim/colors/solarized.vim
+	${LN} ${PWD}/nord.vim ${HOME}/.vim/colors/nord.vim
 
 ${OBJS}:
 	${LN} $(subst ${HOME}/, ${PWD}/dot, $@) $@

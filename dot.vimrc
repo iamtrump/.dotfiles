@@ -60,8 +60,7 @@ nnoremap <Leader><Space> :noh<CR>
 if !has("gui_running")
   set t_Co=256
 endif
-set background=dark
-colorscheme solarized
+colorscheme nord
 " }}}
 
 " Visual stuff {{{
@@ -80,6 +79,7 @@ set listchars=tab:→\ ,eol:¬
 set ruler
 " Show current line.
 set cursorline
+set cursorlineopt=line
 " Show commands.
 set showcmd
 " Show modes.
