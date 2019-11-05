@@ -56,13 +56,6 @@ set gdefault
 nnoremap <Leader><Space> :noh<CR>
 " }}}
 
-" Colors {{{
-if !has("gui_running")
-  set t_Co=256
-endif
-colorscheme nord
-" }}}
-
 " Visual stuff {{{
 " Enable syntax highlighting.
 syntax on
@@ -79,7 +72,7 @@ set listchars=tab:→\ ,eol:¬
 set ruler
 " Show current line.
 set cursorline
-set cursorlineopt=line
+"set cursorlineopt=line
 " Show commands.
 set showcmd
 " Show modes.
@@ -88,6 +81,14 @@ set showmode
 set wrap
 " Toggle invisible symbols
 nnoremap <Leader>i :set list!<CR>
+" }}}
+
+" Colors {{{
+if !has("gui_running")
+  set t_Co=256
+endif
+colorscheme nord
+hi CursorLineNr gui=bold cterm=bold
 " }}}
 
 " Misc settings {{{

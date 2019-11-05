@@ -31,33 +31,22 @@ export PS1='\[\e[0;32m\]\u@\h \[\e[0;33m\]\w \[\e[0;32m\]\$\[\e[m\] '
 
 # splash
 if shopt -q login_shell; then
-  echo '
-                        o/.-                      
-                      :+ooo+`                     
-                     :ooooo++`                    
-                   `::ooooooo/`                   
-                   .:ooooooooo+                   
-                  `oooo+.+oooo+-                  
-                `:/ooo/. -++oooo.                 
-                /+ooo+    .ooooo+.                
-              .+oooo+      .oooo+/.               
-             .ooooo-        `ooooo:-              
-          .-:oooo+-          -oooo+/`             
-          /+oooooo+/:.    ``./oooooo-             
-       `.:+ooooooooo+-   `:++ooooooo.             
-            :-/+++/ooo  + ooooo+o+//              
-                :-ooo+  .:+oooo:                  
-               --:ooo`   -+ooooo                  
-               -./oo+     :+ooo+.                 
-               -`ooo:     -/oooo:-                
-              ../oo+       .o+ooo+.               
-              //ooo-        `+oooo/-              
-             -:/oo+.         .ooooo/              
-            `:+ooo-           -ooooo-             
-            .ooooo////////:----/ooooo             
-            -oooooooooooooooooooooooo             
-            --:::::-::::--.-//+///+::             
-  '
+echo '
+              /*             
+            /////            
+           */////*           
+          .///,///,          
+         *//,  .///,         
+        ///.    .///         
+     ,////.      *///        
+     *//////,  */////        
+         **/* *///.          
+         .//   ///*          
+         ./*   *//**         
+        *//     .///.        
+       .*//      *///        
+       *///////***///*       
+'
   uptime
 fi
 
@@ -84,3 +73,5 @@ alias root='sudo -s -E'
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
 fi
+
+cd
