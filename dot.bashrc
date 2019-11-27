@@ -4,6 +4,8 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   fi
   #alias sudoedit='sudo vim -u ~/.vimrc'
   alias sudoedit='sudo ${EDITOR}'
+  alias ls='gls'
+  alias dircolors='gdircolors'
 else
   if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
@@ -55,10 +57,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias -- --='cd -'
-alias ls='ls -F'
-alias l='ls -1'
-alias ll='ls -l'
-alias la='ls -la'
+alias l='ls -F --color=auto --group-directories -1'
+alias ll='l -l'
+alias la='ll -a'
+alias ltr='ll -tr'
 alias df='df -h'
 alias du='du -h'
 alias sudo='sudo '
@@ -69,6 +71,8 @@ alias bc='bc -lq'
 alias mc='mc -b'
 alias @=at
 alias root='sudo -s -E'
+
+eval $(dircolors ~/.dir_colors)
 
 if [ -f ~/.bashrc.local ]; then
     source ~/.bashrc.local
