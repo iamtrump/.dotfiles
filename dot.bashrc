@@ -2,8 +2,7 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
-  #alias sudoedit='sudo vim -u ~/.vimrc'
-  alias sudoedit='sudo ${EDITOR}'
+  alias sudoedit='sudo -e'
   alias ls='gls -F --color=auto --group-directories'
   alias dircolors='gdircolors'
 else
@@ -64,13 +63,11 @@ alias la='ll -a'
 alias ltr='ll -tr'
 alias df='df -h'
 alias du='du -h'
-alias sudo='sudo '
 alias grep='grep --color'
-alias grepi='grep -i --color'
+alias grepi='grep -i'
 alias e="$EDITOR"
 alias bc='bc -lq'
 alias mc='mc -b'
-alias @=at
 alias root='sudo -s -E'
 
 eval $(dircolors ~/.dir_colors)
