@@ -4,13 +4,14 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   fi
   #alias sudoedit='sudo vim -u ~/.vimrc'
   alias sudoedit='sudo ${EDITOR}'
-  alias ls='gls'
+  alias ls='gls -F --color=auto --group-directories'
   alias dircolors='gdircolors'
 else
   if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
   fi
   export PATH="/usr/sbin:/sbin:${PATH}"
+  alias ls='ls -F --color=auto --group-directories'
 fi
 
 export PATH="${HOME}/bin:/usr/local/bin:${PATH}"
@@ -57,10 +58,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias -- --='cd -'
-alias l='ls -F --color=auto --group-directories -1'
+alias l='ls -1'
 alias ll='l -l'
-alias la='l -la'
-alias ltr='l -ltr'
+alias la='ll -a'
+alias ltr='ll -tr'
 alias df='df -h'
 alias du='du -h'
 alias sudo='sudo '
