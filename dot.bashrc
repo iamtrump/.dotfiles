@@ -31,27 +31,6 @@ shopt -s cdspell
 # prompt
 export PS1='\[\e[0;32m\]\u@\h \[\e[0;33m\]\w \[\e[0;32m\]\$\[\e[m\] '
 
-# splash
-if shopt -q login_shell; then
-echo '
-              /*             
-            /////            
-           */////*           
-          .///,///,          
-         *//,  .///,         
-        ///.    .///         
-     ,////.      *///        
-     *//////,  */////        
-         **/* *///.          
-         .//   ///*          
-         ./*   *//**         
-        *//     .///.        
-       .*//      *///        
-       *///////***///*       
-'
-  uptime
-fi
-
 # aliases
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -70,10 +49,25 @@ alias bc='bc -lq'
 alias mc='mc -b'
 alias root='sudo -s -E'
 
-eval $(dircolors ~/.dir_colors)
+[ -f ~/.dir_colors ] && eval $(dircolors ~/.dir_colors)
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
 
-if [ -f ~/.bashrc.local ]; then
-    source ~/.bashrc.local
-fi
-
+# splash
+echo '
+              /*             
+            /////            
+           */////*           
+          .///,///,          
+         *//,  .///,         
+        ///.    .///         
+     ,////.      *///        
+     *//////,  */////        
+         **/* *///.          
+         .//   ///*          
+         ./*   *//**         
+        *//     .///.        
+       .*//      *///        
+       *///////***///*       
+'
+uptime
 cd
