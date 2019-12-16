@@ -53,7 +53,8 @@ alias root='sudo -s -E'
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
 
 # splash
-echo '
+if shopt -q login_shell; then
+  echo '
               /*             
             /////            
            */////*           
@@ -61,7 +62,7 @@ echo '
          *//,  .///,         
         ///.    .///         
      ,////.      *///        
-     *//////,  */////        
+     *//////,  */////*       
          **/* *///.          
          .//   ///*          
          ./*   *//**         
@@ -69,5 +70,6 @@ echo '
        .*//      *///        
        *///////***///*       
 '
-uptime
+  uptime
+fi
 cd
