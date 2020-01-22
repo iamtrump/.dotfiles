@@ -25,7 +25,10 @@ prepend_to_var PATH '/usr/sbin'
 prepend_to_var PATH '/usr/local/sbin'
 prepend_to_var PATH "${HOME}/bin"
 
-if ! tty -s; then return; fi # exit if non interactive shell
+# exit if non interactive shell
+if [ -z "$PS1" ]; then
+  return
+fi
 
 if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   BREW_PREFIX=$(brew --prefix)
@@ -99,3 +102,11 @@ echo '
 '
 uptime
 cd
+
+# tmux
+if shopt -q login_shell && hash tmux >/dev/null 2>&1; then
+  #if not inside a tmux session, and if no session is started, start a new session
+  if [ "$TERM" != "screen-256color" ]; then
+     tmux attach -t default || tmux new-session -s default
+  fi
+fi
