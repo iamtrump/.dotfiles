@@ -81,6 +81,8 @@ alias root='sudo -s -E'
 
 [ -f ~/.dir_colors ] && eval $(dircolors ~/.dir_colors)
 
+[ -f ~/.bash-powerline.sh ] && source ~/.bash-powerline.sh
+
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
 
 # splash
@@ -104,7 +106,7 @@ uptime
 cd
 
 # tmux
-if shopt -q login_shell && hash tmux >/dev/null 2>&1; then
+if hash tmux >/dev/null 2>&1; then
   #if not inside a tmux session, and if no session is started, start a new session
   if [ "$TERM" != "screen-256color" ]; then
      tmux attach -t default || tmux new-session -s default
