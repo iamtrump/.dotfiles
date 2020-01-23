@@ -18,11 +18,15 @@ __powerline() {
     SYMBOL_GIT_PULL=${SYMBOL_GIT_PULL:-↓}
 
     if [[ -z "$PS_SYMBOL" ]]; then
-      case "$(uname)" in
-          Darwin)   PS_SYMBOL='';;
-          Linux)    PS_SYMBOL='$';;
-          *)        PS_SYMBOL='%';;
-      esac
+      if [ "$(whoami)" = "root" ]; then
+        PS_SYMBOL='#'
+      else
+        case "$(uname)" in
+            Darwin)   PS_SYMBOL='';;
+            Linux)    PS_SYMBOL='$';;
+            *)        PS_SYMBOL='%';;
+        esac
+      fi
     fi
 
     __git_info() { 
