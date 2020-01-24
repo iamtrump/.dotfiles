@@ -103,7 +103,7 @@ echo '
        *///////***///*       
 '
 uptime
-cd
+#cd
 
 # tmux
 if hash tmux >/dev/null 2>&1; then

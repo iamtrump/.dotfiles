@@ -10,6 +10,7 @@ __powerline() {
     COLOR_GIT=${COLOR_GIT:-'\[\033[0;36m\]'} # cyan
     COLOR_SUCCESS=${COLOR_SUCCESS:-'\[\033[0;32m\]'} # green
     COLOR_FAILURE=${COLOR_FAILURE:-'\[\033[0;31m\]'} # red
+    COLOR_HOST=${COLOR_HOST:-'\[\033[0;35m\]'} # magenta
 
     # Symbols
     SYMBOL_GIT_BRANCH=${SYMBOL_GIT_BRANCH:-⑂}
@@ -87,7 +88,9 @@ __powerline() {
             local git="$COLOR_GIT$(__git_info)$COLOR_RESET"
         fi
 
-        PS1="$cwd$git$symbol"
+        local host="$COLOR_HOST\h:$COLOR_RESET"
+
+        PS1="$host $cwd$git$symbol"
     }
 
     PROMPT_COMMAND="ps1${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
