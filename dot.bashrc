@@ -59,7 +59,7 @@ shopt -s histappend
 shopt -s cdspell
 
 # prompt
-export PS1='\[\e[0;32m\]\u@\h \[\e[0;33m\]\w \[\e[0;32m\]\$\[\e[m\] '
+export PS1='\e[0;35m\]\h \[\e[0;34m\]\w \[\e[0;32m\]\$\[\e[m\] '
 
 # aliases
 alias ..='cd ..'
