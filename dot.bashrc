@@ -53,6 +53,7 @@ export EDITOR='vim'
 # history stuff
 export HISTCONTROL=erasedups
 export HISTSIZE=10000
+export HISTCONTROL=ignorespace
 shopt -s histappend
 
 # some other opts
