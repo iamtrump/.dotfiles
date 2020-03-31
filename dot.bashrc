@@ -51,18 +51,19 @@ fi
 export EDITOR='vim'
 
 # history stuff
-export HISTCONTROL=erasedups
 export HISTSIZE=10000
-export HISTCONTROL=ignorespace
+export HISTCONTROL=ignorespace:erasedups
 shopt -s histappend
 
 # some other opts
 shopt -s cdspell
 
 # prompt
-export PS1='\e[0;35m\]\h \[\e[0;34m\]\w \[\e[0;32m\]\$\[\e[m\] '
+export PS1='\[\033[0;35m\]\h \[\[\033[0;34m\]\w \[\[\033[0;32m\]\$\[\[\033[m\] '
+export PROMPT_DIRTRIM=1
 
 # aliases
+alias sudo='sudo '
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -75,16 +76,21 @@ alias df='df -h'
 alias du='du -h'
 alias grep='grep --color'
 alias grepi='grep -i'
+alias rgrep='grep -r'
+alias rgrepi='grep -ir'
 alias e="$EDITOR"
 alias bc='bc -lq'
 alias mc='mc -b'
 alias root='sudo -s -E'
+hash colordiff && alias diff='colordiff'
 
 [ -f ~/.dir_colors ] && eval $(dircolors ~/.dir_colors)
 
 [ -f ~/.bash-powerline.sh ] && source ~/.bash-powerline.sh
 
 [ -f ~/.bashrc.local ] && source ~/.bashrc.local
+
+cd ~
 
 # splash
 echo '
@@ -104,7 +110,6 @@ echo '
        *///////***///*       
 '
 uptime
-#cd
 
 # tmux
 if hash tmux >/dev/null 2>&1; then
