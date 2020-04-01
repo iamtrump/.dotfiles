@@ -1,7 +1,6 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# PATH stuff
 function prepend_to_var() {
   eval value=\$${1}
   if [[ $value != *:${2}:* && $value != ${2}:* && $value != *:${2} && $value != ${2} ]]; then
@@ -11,6 +10,10 @@ function prepend_to_var() {
       export ${1}="${2}:${value}"
     fi
   fi
+}
+
+function is_exec() {
+  [ -x "$(command -v $1)" ]
 }
 
 if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
@@ -82,7 +85,7 @@ alias e="$EDITOR"
 alias bc='bc -lq'
 alias mc='mc -b'
 alias root='sudo -s -E'
-hash colordiff && alias diff='colordiff'
+is_exec colordiff && alias diff='colordiff'
 
 [ -f ~/.dir_colors ] && eval $(dircolors ~/.dir_colors)
 
