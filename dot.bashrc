@@ -60,6 +60,7 @@ shopt -s histappend
 
 # some other opts
 shopt -s cdspell
+shopt -s checkwinsize
 
 # prompt
 export PS1='\[\033[0;35m\]\h \[\[\033[0;34m\]\w \[\[\033[0;32m\]\$\[\[\033[m\] '
