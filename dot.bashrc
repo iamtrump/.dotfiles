@@ -41,8 +41,9 @@ if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
   fi
 
   alias sudoedit='sudo -e'
-  alias ls='gls -F --color=auto --group-directories'
-  alias dircolors='gdircolors'
+  is_exec gls && alias ls='gls -F --color=auto --group-directories'
+  is_exec gdircolors && alias dircolors='gdircolors'
+  is_exec gsed && alias sed='gsed'
 else
   if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
