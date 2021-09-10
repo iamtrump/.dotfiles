@@ -1,5 +1,4 @@
 export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
 
 function prepend_to_var() {
   eval value=\$${1}
@@ -87,6 +86,7 @@ alias e="$EDITOR"
 alias bc='bc -lq'
 alias mc='mc -b'
 alias root='sudo -s -E'
+alias t='tmux attach -t default'
 is_exec colordiff && alias diff='colordiff'
 
 [ -f ~/.dir_colors ] && eval $(dircolors ~/.dir_colors)
