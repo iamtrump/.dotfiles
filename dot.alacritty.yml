@@ -2,7 +2,7 @@ window:
   opacity: 1
   title: tdz terminal
   dimensions:
-    columns: 120
+    columns: 160
     lines: 40
   padding:
     x: 3
