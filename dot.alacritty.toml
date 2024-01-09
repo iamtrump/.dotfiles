@@ -1,0 +1,126 @@
+[bell]
+animation = "EaseOutExpo"
+color = "0xEBCB8B"
+duration = 0
+
+[colors.bright]
+black = "0x4C566A"
+blue = "0x81A1C1"
+cyan = "0x8FBCBB"
+green = "0xA3BE8C"
+magenta = "0xB48EAD"
+red = "0xBF616A"
+white = "0xECEFF4"
+yellow = "0xEBCB8B"
+
+[colors.normal]
+black = "0x3B4252"
+blue = "0x81A1C1"
+cyan = "0x88C0D0"
+green = "0xA3BE8C"
+magenta = "0xB48EAD"
+red = "0xBF616A"
+white = "0xE5E9F0"
+yellow = "0xEBCB8B"
+
+[colors.primary]
+background = "0x2E3440"
+foreground = "0xD8DEE9"
+
+[cursor]
+style = "Block"
+
+[debug]
+render_timer = false
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "FuraCodeiScriptNerdFontAAE Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "FuraCodeiScriptNerdFontAAE Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FuraCodeiScriptNerdFontAAE Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "CreateNewWindow"
+key = "N"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "F"
+mods = "Command"
+
+[[keyboard.bindings]]
+action = "None"
+key = "B"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0001"
+key = "Left"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u0005"
+key = "Right"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0015"
+key = "Back"
+mods = "Command"
+
+[mouse]
+hide_when_typing = false
+
+[[mouse.bindings]]
+action = "Paste"
+mouse = "Right"
+
+[[mouse.bindings]]
+action = "Paste"
+mouse = "Middle"
+
+[scrolling]
+history = 30000
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t¬→=*"
+
+[window]
+decorations = "full"
+dynamic_padding = false
+opacity = 1
+startup_mode = "Windowed"
+title = "tdz terminal"
+
+[window.dimensions]
+columns = 160
+lines = 40
+
+[window.padding]
+x = 3
+y = 3
