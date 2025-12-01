@@ -34,6 +34,7 @@ if [ -z "$PS1" ]; then
 fi
 
 if [ $(uname) = 'Darwin' ]; then # OS X specific stuff
+  prepend_to_var PATH "/opt/homebrew/bin"
   BREW_PREFIX=$(brew --prefix)
   export BASH_COMPLETION_COMPAT_DIR="${BREW_PREFIX}/etc/bash_completion.d"
   if [ -r "${BREW_PREFIX}/etc/profile.d/bash_completion.sh" ]; then
