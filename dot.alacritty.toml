@@ -1,31 +1,31 @@
 [bell]
 animation = "EaseOutExpo"
-color = "0xEBCB8B"
+color = "#EBCB8B"
 duration = 0
 
 [colors.bright]
-black = "0x4C566A"
-blue = "0x81A1C1"
-cyan = "0x8FBCBB"
-green = "0xA3BE8C"
-magenta = "0xB48EAD"
-red = "0xBF616A"
-white = "0xECEFF4"
-yellow = "0xEBCB8B"
+black = "#4C566A"
+blue = "#81A1C1"
+cyan = "#8FBCBB"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#ECEFF4"
+yellow = "#EBCB8B"
 
 [colors.normal]
-black = "0x3B4252"
-blue = "0x81A1C1"
-cyan = "0x88C0D0"
-green = "0xA3BE8C"
-magenta = "0xB48EAD"
-red = "0xBF616A"
-white = "0xE5E9F0"
-yellow = "0xEBCB8B"
+black = "#3B4252"
+blue = "#81A1C1"
+cyan = "#88C0D0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#E5E9F0"
+yellow = "#EBCB8B"
 
 [colors.primary]
-background = "0x2E3440"
-foreground = "0xD8DEE9"
+background = "#2E3440"
+foreground = "#D8DEE9"
 
 [cursor]
 style = "Block"
