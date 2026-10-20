@@ -84,11 +84,12 @@ nnoremap <Leader>i :set list!<CR>
 " }}}
 
 " Colors {{{
-if has('termguicolors')
-  set termguicolors
+if !has("gui_running")
+  set t_Co=256
 endif
 colorscheme nord
 hi CursorLineNr gui=bold cterm=bold
+hi Visual ctermbg=4
 " }}}
 
 " Misc settings {{{
