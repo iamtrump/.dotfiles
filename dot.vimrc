@@ -84,8 +84,8 @@ nnoremap <Leader>i :set list!<CR>
 " }}}
 
 " Colors {{{
-if !has("gui_running")
-  set t_Co=256
+if has('termguicolors')
+  set termguicolors
 endif
 colorscheme nord
 hi CursorLineNr gui=bold cterm=bold
