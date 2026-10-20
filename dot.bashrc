@@ -1,6 +1,5 @@
-export LC_ALL=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 
 function prepend_to_var() {
   eval value=\$${1}
@@ -124,7 +123,7 @@ uptime
 # tmux
 if hash tmux >/dev/null 2>&1; then
   #if not inside a tmux session, and if no session is started, start a new session
-  if [ "$TERM" != "screen-256color" ]; then
+  if [ -z "$TMUX" ]; then
      tmux attach -t default || tmux new-session -s default
   fi
 fi

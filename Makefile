@@ -1,4 +1,4 @@
-LN = ln -fFs
+LN = ln -sfn
 RM = rm -rf
 SRCS = $(wildcard dot*)
 OBJS = $(subst dot, ${HOME}/, ${SRCS})
